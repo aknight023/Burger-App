@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html>
+  <head>   
+    <title>Eat da Burger!</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+  <body>
+  
+    <!-- Page Container -->
+    <div class="container">
+      
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">Eat A burger</h1>      
+      </div>
+    </div> 
+      
+      <!-- Burger Content from index.handlebars -->
+      {{{body}}}
+
+
+      <br><br>
+
+      <!-- Input New Burgers Form -->
+      <form action="burger/create" method="POST"> 
+        
+        <!-- Text Area Input -->
+        <div class="row">
+          <!-- Empty Div to help center textarea -->
+          <div class="col-md-3"></div> 
+
+          <!-- Burger Input Box -->
+          <div class="form-group col-md-6">
+            <center><label for="new_burger" class="red_font">Request a new burger and place your order!</label></center>
+            <textarea class="form-control" columns="8" rows="4" id="new_burger" name="burger_name"></textarea>
+          </div>
+
+          <!-- Empty Div to help center textarea -->
+          <div class="col-md-3"></div> 
+        </div>
+      
+        <!-- Submit Button -->
+        <center>
+          <button id="submit-button" type="submit" class="btn btn-danger">Place an Order!</button>
+        </center>
+
+      </form>
+
+      <br>
+
+    </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+  </body>
+</html>
