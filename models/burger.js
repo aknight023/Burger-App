@@ -10,13 +10,19 @@ var burger = {
   	},
 
   		insertOne: function(burger_name, cb){
-   		orm.insertOne(burger_name,function(res) {
+   		orm.insertOne(burger_name, function(res) {
+   			
    			cb(res);
+   			
    		});     
 
   	},
-  		updateOne: function(burger_name, burger_id){
-  		return orm.updateOne(burger_name, burger_id);
+  		updateOne: function(burger_name, burger_id, cb){
+  		orm.updateOne(burger_name, burger_id, function(res) {
+  			
+  			cb(res)
+
+  		});
 	}
 };
 

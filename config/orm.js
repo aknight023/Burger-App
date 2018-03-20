@@ -16,12 +16,12 @@ var orm = {
 			 cb(result);
 		});
 	},
-	updateOne: function ( burger_name, id) {
+	updateOne: function ( burger_name, id, cb) {
 		
 		connection.query("UPDATE burgers SET burger_name = ? WHERE id = ?", [burger_name, id], function (err, result) {
-			if (err) throw err;
+			if (err) throw err;			
+			cb(result);
 			
-			return result;
 		});
 	},
 };

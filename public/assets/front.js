@@ -22,12 +22,13 @@ $(document).ready(function() {
 
 	$('.devour-button').on('click', function() {
 
-		var devourData = {			
+		var devourData = {
+				id: $(this).attr('data-id'),			
 				burger_name: $('#new_burger').val().trim()
 			}
 
 		// Send the POST request.
-		$.ajax("/burger/create", {
+		$.ajax("/burger/eat", {
 			type: "POST",
 			data: devourData
 		}).then(function() {
