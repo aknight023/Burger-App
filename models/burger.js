@@ -17,12 +17,19 @@ var burger = {
    		});     
 
   	},
-  		updateOne: function(burger_name, burger_id, cb){
-  		orm.updateOne(burger_name, burger_id, function(res) {
+  		updateOne: function( burger_id, cb){
+  		orm.updateOne(true, burger_id, function(res) {
   			
   			cb(res)
 
   		});
+	}, restoreOne: function(burger_id, cb) {
+  		orm.updateOne(false, burger_id, function(res) {
+  			
+  			cb(res)
+
+  		});
+
 	}
 };
 

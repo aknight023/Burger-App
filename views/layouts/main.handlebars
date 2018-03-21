@@ -2,36 +2,49 @@
 <!DOCTYPE html>
 <html>
   <head>   
-    <title>Eat da Burger!</title>
+    <title>Eat Da Burger!</title>
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js" integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/images/burgerlogo.PNG">
   </head>
   <body>
   
+    <!-- Image and text -->
+    <nav class="navbar navbar-light bg-light justify-content-between mb-5">
+      <a class="navbar-brand" href="/">
+        <img src="/assets/images/burgerlogo.PNG" width="30" height="30" class="d-inline-block align-top" alt="Homelogo">
+        Eat da Burger
+      </a>
+      <p class="navbar-brand" href="/">Have a burger to stay sane.</p>
+    </nav>
+
+
     <!-- Page Container -->
-    <div class="container">
-      
-    <div class="jumbotron jumbotron-fluid">
-      <div class="container">
-        <h1 class="display-4">Eat da Burger</h1>      
-      </div>
-    </div> 
+    <div class="container">  
+
       
       <!-- Burger Content from index.handlebars -->
-      {{{body}}}
-         
+      {{{body}}}         
             
         <div class="row">
+          <div class="col-md-3"></div>
+            <div class="col-md-6">
+              <div class="card my-4">
+                <h5 class="card-header text-center">Request a new burger and place your order!</h5>            
+                <div class="card-body">         
+                  <div class="form-group">
+                    <label for="new_burger"></label>
+                    <textarea class="form-control" rows="4" id="new_burger" name="burger_name"></textarea>
+                    <button id="submit-button" type="submit" class="btn btn-danger mx-auto mt-4"><i class="fas fa-utensils"></i>  Place an Order!</button> 
+                  </div>
+                </div> 
+              </div>
+            </div>         
           <div class="col-md-3"></div> 
-          <div class="form-group col-md-6">
-            <center><label for="new_burger" class="red_font">Request a new burger and place your order!</label></center>
-            <textarea class="form-control" columns="8" rows="4" id="new_burger" name="burger_name"></textarea>
-            <button id="submit-button" type="submit" class="btn btn-danger">Place an Order!</button> 
-          </div>         
-          <div class="col-md-3"></div> 
-        </div>   
-              
-          
-
+        </div>
     </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

@@ -4,11 +4,6 @@ var burger = require('../models/burger.js');
 
 
 // http://expressjs.com/en/guide/routing.html
-// Index Redirect
-// router.get('/', function (req, res) {
-//   res.redirect('/index');
-// });
-
 
 // define the home page route
 router.get('/', function (req, res) {
@@ -31,10 +26,15 @@ router.post('/burger/create', function (req, res) {
 });
 
 // Devour a Burger
-router.post('/burger/eat/', function (req, res) {
-  burger.updateOne( req.body.burger_name, req.body.id, function() {
+router.post('/burger/eat', function (req, res) {
+  burger.updateOne(req.body.id, function() {
+    res.redirect('/');
+  });
+});
+router.post('/burger/restore', function (req, res) {
+  burger.restoreOne(req.body.id, function() {
     res.redirect('/');
   });
 });
 
-module.exports = router
+module.exports = router;
